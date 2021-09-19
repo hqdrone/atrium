@@ -1,0 +1,154 @@
+.header
+	background: #EEF1F4
+	position sticky
+	top: 0
+	z-index 9999
+	
+	&__layout
+		border-bottom: 1px solid #D1D7DC
+		padding: 16px 0
+		display grid
+		grid-template-columns 1fr auto 1fr
+		align-items center
+	
+	&__menu
+		cursor: pointer;
+		width: 48px
+		height: 48px
+		display none
+	
+	&__nav
+		ul
+			ulr()
+			display flex
+			gap 0 64px
+			
+			li
+				a
+					font-size: 15px
+					color #6A7C92
+					text-decoration: none;
+					tr()
+					
+					&:hover
+						color $main
+				
+				&.active
+					a
+						color $main
+						font-weight: 600
+	
+	&__tools
+		display flex
+		align-items center
+		justify-content: flex-end;
+		gap 0 16px
+	
+	&__phone
+		a
+			font-size: 15px
+			color #454F5B
+			text-decoration: none
+			tr()
+			
+			&:hover
+				color $main
+	
+	&__account
+		a
+			height: 40px
+			width: 40px
+			background: #D1D7DC
+			display grid
+			place-content center
+			border-radius: 50%
+			tr()
+			
+			&:hover
+				background: $main
+
+.mobile
+	position: fixed;
+	top: 0
+	left: 0
+	bottom: 0
+	height: 100%
+	max-width 288px
+	z-index 10000
+	background: #fff
+	width: 100%
+	border-right: 1px solid #D1D7DC
+	box-shadow 0 8px 20px rgba(#E0E0E0, .5)
+	transform translateX(-100%)
+	tr()
+	display none
+	
+	&.active
+		transform translateX(0)
+	
+	
+	&__wrapper
+		position: absolute;
+		height: 100%
+		width: 100%
+		overflow-y auto
+		padding: 24px
+	
+	&__close
+		cursor pointer
+		width: 24px
+		height: 24px
+		margin-left: auto
+		margin-bottom: 24px
+	
+	&__nav
+		ul
+			ulr()
+			gap 16px
+			display flex
+			flex-direction column
+			
+			li
+				a
+					font-size: 15px
+					color #6A7C92
+					text-decoration: none;
+					tr()
+					
+					&:hover
+						color $main
+				
+				&.active
+					a
+						color $main
+						font-weight: 600
+
+
+@media (max-width: 1399.98px) {
+}
+
+@media (max-width: 1199.98px)
+	.header__nav ul
+		gap 0 32px
+
+@media (max-width: 991.98px)
+	.header__nav
+		display none
+	
+	.header__menu
+		display block
+	
+	.mobile
+		display block
+
+@media (max-width: 767.98px)
+	.header__layout
+		padding: 8px 0
+		grid-template-columns 80px auto 1fr
+
+@media (max-width: 575.98px)
+	.header__layout
+		grid-template-columns 64px auto 1fr
+	
+	.header__phone
+		display none

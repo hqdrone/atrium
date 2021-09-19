@@ -1,11 +1,48 @@
+$main = #02AEB0
+
 tr()
 	transition .24s
 
+ulr()
+	padding: 0
+	margin: 0
+	list-style none
+
 body
 	font-family: 'Jost', sans-serif;
+	color #454F5B
 
 .container
-	max-width (1242+32)px
+	max-width (1242 + 32) px
 	padding 0 16px
 	margin: 0 auto
 
+.logo
+	a
+		color $main
+		font-size: 44px
+		text-decoration: none
+
+@media (max-width: 1399.98px) {
+}
+
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px)
+	.logo a
+		font-size: 32px
+
+@media (max-width: 575.98px) {
+}
+
+@import 'inc/ui'
+@import 'inc/header'
+@import 'inc/hero'
+@import 'inc/accent'
+@import 'inc/about'
+@import 'inc/reviews'
+@import 'inc/footer'

@@ -1,0 +1,43 @@
+section.hero
+	.container
+		.hero__layout
+			.hero__body
+				h1.hero__title Большой главный <br>заголовок
+				.hero__text Разнообразный и богатый опыт начало повседневной работы <br>по формированию позиции позволяет выполнять важные задания.
+				.hero__form.form
+					form
+						.form__section
+							.form__label Регион
+							.form__search
+								input(type="text")#search
+
+						.form__body
+							.form__section
+								.form__label Выбор:
+								.form__options
+									.form__checkboxes
+										.form__checkbox
+											label.checkbox
+												input(type='checkbox')
+												.checkbox__checkmark
+												.checkbox__body Выбор 1
+
+										.form__checkbox
+											label.checkbox
+												input(type='checkbox')
+												.checkbox__checkmark
+												.checkbox__body Выбор 2
+
+									.form__toggle
+										label.toggle
+											input(type='checkbox')
+											.toggle__checkmark
+											.toggle__body Выбор 3
+
+							.form__button
+								button Поиск
+
+
+			.hero__media
+				.hero__check
+					img(src="img/ic_check.svg" alt="")

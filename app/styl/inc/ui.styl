@@ -1,0 +1,93 @@
+.checkbox
+	display flex
+	position relative
+	gap 10px
+	align-items: center
+	cursor pointer
+	user-select none
+	
+	input
+		position absolute
+		opacity 0
+		cursor pointer
+		height 0
+		width 0
+		
+		&:checked
+			& ~ .checkbox__checkmark
+				
+				&:after
+					opacity 1
+	
+	.checkbox__checkmark
+		height 30px
+		width 30px
+		background-color #EEF1F4
+		border 1px solid #6A7C92
+		border-radius 2px
+		display grid
+		place-items center
+		
+		&:after
+			content ''
+			width: 14px
+			height: 12px
+			background: url("../img/check.svg")
+			opacity: 0
+			tr()
+	
+	.checkbox__body
+		color #333
+		line-height 1.4
+		font-size 16px
+
+//Toggle
+
+.toggle
+	display flex
+	gap 10px
+	align-items center
+	position relative
+	cursor pointer
+	user-select none
+	
+	input
+		position absolute
+		opacity 0
+		cursor pointer
+		height 0
+		width 0
+		
+		&:checked
+			& ~ .toggle__checkmark
+				background-color $main
+				
+				&:after
+					left 23px
+					border-color $main
+	
+	.toggle__checkmark
+		height 26px
+		width 48px
+		background-color #D1D7DC
+		transition background-color 0.25s ease
+		border-radius 24px
+		
+		&:after
+			content ""
+			position absolute
+			left 1px
+			top 1px
+			width 24px
+			height 24px
+			display block
+			background-color #fff
+			border-radius 50%
+			transition left 0.24s
+			border 2px solid #A2B6C8
+	
+	.toggle__body
+		color #333
+		line-height 1.4
+		font-size 16px
+		transition color 0.25s ease
